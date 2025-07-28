@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-#print "Best School" 10 timwes
+#print "Best School" 10 times
 
 printed=0;
-while [ "$printed" -lt 10 ]; do
+while [ "$printed" -le 10 ]; 
+do
     echo "Best School";
     printed=$((printed + 1));
 done
