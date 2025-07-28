@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #print "Best School" 10 times
 
-printed=0;
+printed=1;
 while [ "$printed" -le 10 ]; 
 do
     echo "Best School";
