@@ -3,10 +3,10 @@
 #   Only displays part of the name after first dash 
 
 for file in *; do
-    [[ "$file" == .* ]] && continue
-    part="${file#*-}"
-    if [[ "$file" != "$part" ]]; then
-        echo "$part"
+    if [[ -f "$file" || -d "$file" ]]; then
+        name="${file#*-}"
+        if [[ "$name" != "$file" ]]; then
+            echo "$name"
+        fi
     fi
-
 done
