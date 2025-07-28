@@ -2,7 +2,10 @@
 # Displays the current directory in list format
 #   Only displays part of the name after first dash 
 
-list=$(ls)
-for i in $list; do
-  echo "$i" | cut -d '-' -f2
+for file in *; do
+    [[ "$file" == .* ]] && continue
+    part="${file#*-}"
+    if [[ "$file" != "$part" ]]; then
+        echo "$part"
+    fi
 done
